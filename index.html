@@ -48,7 +48,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
-		alert(cold_count);
+		alert(cold_count); <!--Added an alert for cold-->
         }
 
   </script>
@@ -90,7 +90,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-</div>
+</div> <!--Added ending div here after noticing it was missing-->
+
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -110,12 +111,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>
-		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--Added buttons here and made sure the order of the buttons for cold and allergy are correct-->
 		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
 	</div>
 </div>	
 	
-<div class="page" id="three">
+<div class="page" id="three"> <!--Added page 3 by coping page 2 but substituting the next page -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
@@ -127,7 +128,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>
 
-<div class="page" id="four">
+<div class="page" id="four"> <!--Added page 4 by coping page 2-->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
@@ -140,7 +141,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 
 
-<html>
+<html> <!--Attempted to add a results page (didn't expect it to work)-->
 <body>	
 
 <div class="page" id="five">
