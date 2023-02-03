@@ -48,6 +48,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
+		alert(cold_count);
         }
 
   </script>
@@ -113,6 +114,32 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a hred="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
 	</div>
 </div>	
+	
+<div class="page" id="three">
+	<class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have a sore throat?<p>
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+		<a hred="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
+	</div>
+</div>
+
+<div class="page" id="four">
+	<class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Are your symptoms seasonal or chronic?<p>
+		<a onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+		<a onclick="coldAdd();" class="w3-btn w3-black"> No</a>
+	</div>
+</div>
+
+
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
