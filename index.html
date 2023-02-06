@@ -26,6 +26,7 @@ https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 <!-- Added my self as an author, added a goal, and added known issues-->
+
    <head> 
       <title>Hello World</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,7 +58,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var resultText = document.getElementById("results") <!-- Created a variable for the results-->
 		resultText.innerHTML = "Probability it is allergies =" + allergy_percentage + "<br> Probability it is a cold =" + cold_percentage
 		document.getElementById("results").innerHTML = "Here are your results:";
-	  
   </script>
 
 
@@ -154,12 +154,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p> Results </p> <!--Added text here that shows that the button displays results--> <!-- Added ending div-->
-		<a class="w3-btn w3-black" onclick="displayResults();" > <!--Created a button that will display results--> <!-- Adjusted beginning and ending divs-->
+		<a class="w3-btn w3-black" onclick="displayResults();"> View Results </a> <!--Created a button that will display results--> <!-- Adjusted beginning and ending divs--> <!--Added view results-->
 		<p id="results" ></p> <!-- Possibly displays results in text--> <!-- Adjusted beginning and ending divs-->
 
 	</div>
 	
-
+</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
