@@ -45,19 +45,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
 
-        }
+        };
 
         function coldAdd(){
             cold_count = cold_count + 1;
 		alert(cold_count); <!--I noticed that there was no alert for cold, so I added an alert that will pop up a notification of the count for cold-->
-        }
+        };
 	
 	function displayResults(){ <!-- I created a function that will display my results. I included this under the scripts.
 		var allergy_percentage = (allergy_count/4) * 100; <!-- Created a variable for allergy percentage that divides the variable of allergy count by 4 (4 questions) and multiplied by 100 (to get percentage)-->
 		var cold_percentage = (cold_count/4) * 100; <!-- Created a variable for cold percentage that divides the  variable of cold count by 4 (4 questions) and multiplied by 100 (to get percentage)-->
 		var resultText = document.getElementById("results") <!-- Created a variable for the results-->
 		resultText.innerHTML = "Probability it is allergies =" + allergy_percentage + "<br> Probability it is a cold =" + cold_percentage
-		document.getElementById("results").innerHTML = "Here are your results:";
+		
+	}; <!--Closed the function andgot rid of unnecessary code-->
   </script>
 
 
