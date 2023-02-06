@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Remy Tran <!-- Added my self as an author-->
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of this questionare is to determine the probability of whether your symptoms indicate an allergy or a cold. <!-- Addded the goal of the code-->
  
 Known Issues:
-blah, blah, blah, blah
+This app does not in anyway provide a accurate diagnosis.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -48,9 +48,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
-		alert(cold_count); <!--Added an alert for cold-->
+		alert(cold_count); <!--I noticed that there was no alert for cold, so I added an alert that will pop up a notification of the count for cold-->
         }
-
+	
+	function displayResults(){ <!-- I created a function that will display my results. I included this under the scripts.
+		var allergy_percentage = (allergy_count/4) * 100; <!-- Created a variable for allergy percentage that divides the variable of allergy count by 4 (4 questions) and multiplied by 100 (to get percentage)-->
+		var cold_percentage = (cold_count/4) * 100; <!-- Created a variable for cold percentage that divides the  variable of cold count by 4 (4 questions) and multiplied by 100 (to get percentage)-->
+		var resultText = document.getElementById("results") <!-- Created a variable for the results-->
+		resultText.innerHTML = "Probability it is allergies =" + allergy_percentage + "<br> Probability it is a cold =" + cold_percentage
+		document.getElementById("results").innerHTML = "Here are your results:";
+	  
   </script>
 
 
@@ -140,29 +147,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>
 
-
-<html> <!--Attempted to add a results page (didn't expect it to work)-->
-<body>	
-
-<div class="page" id="results"> <!--Changed id to "results"-->
+<div class="page" id="five"> <!--Changed id to "five"-->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results<h1> <!--Adding text on the results page-->
 	</div>
 	
 	<div id="content" class="w3-container">
-		
-	<p id="results"></p>
-	<script>
-	var resultText = document.getElementById("results")
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent
-	document.getElementById("results").innerHTML = "Here are your results:";
-        </script>
+		<p> Results </p> <!--Added text here that shows that the button displays results-->
+		<a> class="w3-btn w3-black" onclick="displayResults();" </a> <!--Created a button that will display results-->
+		<p> id="results" </p> <!-- Possibly displays results in text-->
+
 	</div>
 
 </div>
-
-</body>
-</html>	
 	
 
 
