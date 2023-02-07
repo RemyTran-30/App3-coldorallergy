@@ -43,13 +43,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert("allergy count:" + allergy_count); <!-- I included text that depicts that the allergy count in the text box-->
+		alert("Allergy count: " + allergy_count); <!-- I included text that depicts that the allergy count in the text box-->
 
         };
 
         function coldAdd(){
             cold_count = cold_count + 1;
-		alert("cold count:" + cold_count); <!--I included text that depicts that the allergy count in the text box. Futhermore, I noticed that there was no alert for cold, so I added an alert that will pop up a notification of the count for cold-->
+		alert("Cold count: " + cold_count); <!--I included text that depicts that the allergy count in the text box. Futhermore, I noticed that there was no alert for cold, so I added an alert that will pop up a notification of the count for cold-->
         };
 	
 	function displayResults(){ <!-- I created a function that will display my results under scripts.
@@ -150,11 +150,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="five"> <!--Added a div that included class and id that would direct the user to page 3-->
 	<div class="w3-container w3-flat-carrot"> <!-- Added a div class for the w3 container w3-flat-carrot-->
-		<h1>VResults</h1>  <!--Added a h, then wrote the header for question 3 here. Futhermore, I added text on the results page-->
+		<h1>Results</h1>  <!--Added a h, then wrote the header for question 3 here. Futhermore, I added text on the results page-->
 	</div> <!--Closed the div-->
 	
 	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container-->
-		<p> View Your Results Here </p> <!--Added a p, then added text here that shows that the button displays results. Futhermore, I Added ending div-->
+		<p> View Your Results By Pressing This Button: </p> <!--Added a p, then added text here that shows that the button displays results. Futhermore, I Added ending div-->
 		<a class="w3-btn w3-black" onclick="displayResults();"> View Results </a> <!--Added a, then made a button that will display results. Futhermore, I adjusted beginning and ending divs-->
 		<p id="results" ></p> <!-- Possibly displays results in text. Futhermore, I adjusted beginning and ending divs-->
 	</div>  <!--Closed the div-->
