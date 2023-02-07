@@ -43,22 +43,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
+		alert("allergy count:" + allergy_count); <!-- I included text that depicts that the allergy count in the text box-->
 
         };
 
         function coldAdd(){
             cold_count = cold_count + 1;
-		alert(cold_count); <!--I noticed that there was no alert for cold, so I added an alert that will pop up a notification of the count for cold-->
+		alert("cold count:" + cold_count); <!--I included text that depicts that the allergy count in the text box. Futhermore, I noticed that there was no alert for cold, so I added an alert that will pop up a notification of the count for cold-->
         };
 	
-	function displayResults(){ <!-- I created a function that will display my results. I included this under the scripts.
+	function displayResults(){ <!-- I created a function that will display my results under scripts.
 		var allergy_percentage = (allergy_count/4) * 100; <!-- Created a variable for allergy percentage that divides the variable of allergy count by 4 (4 questions) and multiplied by 100 (to get percentage)-->
 		var cold_percentage = (cold_count/4) * 100; <!-- Created a variable for cold percentage that divides the  variable of cold count by 4 (4 questions) and multiplied by 100 (to get percentage)-->
-		var resultText = document.getElementById("results") <!-- Created a variable for the results-->
+		var resultText = document.getElementById("results") <!-- Created a variable for stat stores my results-->
 		resultText.innerHTML = "Probability it is allergies =" + allergy_percentage + "<br> Probability it is a cold =" + cold_percentage
 		
-	}; <!--Closed the function andgot rid of unnecessary code-->
+	}; <!--This will display the results on the results page after pressing the button. Furthermore I closed the function and got rid of unnecessary code that was previously here-->
   </script>
 
 
@@ -106,9 +106,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>
-	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <p>Are your eyes watery or itchy?</p> <!--I wrote out the first question here-->
+	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--I created a black yes button that would add to the allergy count and direct the user to the second page-->
+	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--I created a black no button that would add to the cold count and direct the user to the second page-->
     	</div>
 </div>
 
@@ -118,49 +118,47 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
-		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--Added buttons here and made sure the order of the buttons for cold and allergy are correct-->
-		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
+		<p>Do you have a fever?</p> <!--Added a p, then wrote the second question here-->
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--I created a black yes button that would add to the cold count and direct the user to the third page-->
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--I created a black no button that would add to the allergy count and direct the user to the third page-->
 	</div>
 </div>	
 	
-<div class="page" id="three"> <!--Added page 3 by coping page 2 but substituting the next page -->
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
-	</div>
+<div class="page" id="three"> <!--Added a div that included class and id that would direct the user to page 3-->
+	<div class="w3-container w3-flat-carrot"> <!-- Added a div class for the w3 container w3-flat-carrot-->
+		<h1>Question 3</h1> <!--Added a h, then wrote the header for question 3 here-->
+	</div> <!--Closed the div-->
 	
-	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?<p>
-		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
-	</div>
-</div>
+	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container-->
+		<p>Do you have a sore throat?<p> <!--Added a p, then wrote question 3-->
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--I created a black yes button that would add to the cold count and direct the user to the fourth page-->
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--I created a black no button that would add to the allergy count and direct the user to the fourth page-->
+	</div> <!--Closed the div-->
+</div> <!--Closed the div-->
 
-<div class="page" id="four"> <!--Added page 4 by coping page 2-->
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
-	</div>
+<div class="page" id="four"> <!--Added a div that included class and id that would direct the user to page 4-->
+	<div class="w3-container w3-flat-carrot"> <!-- Added a div class for the w3 container w3-flat-carrot-->
+		<h1>Question 4</h1> <!--Added a h, then wrote the header for question 3 here-->
+	</div> <!--Closed the div-->
 	
-	<div id="content" class="w3-container">
-		<p>Are your symptoms seasonal or chronic?<p>
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--Changed href for yes and no to "five"-->
-		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No</a> 
-	</div>
-</div>
+	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container-->
+		<p>Are your symptoms seasonal or chronic?<p> <!--Added a p, then wrote question 3-->
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--I created a black yes button that would add to the allergy count and direct the user to the fifth page. Furrthermore, I changed href for yes and no to "five"-->
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--I created a black no button that would add to the cold count and direct the user to the fifth page-->
+	</div> <!--Closed the div-->
+</div> <!--Closed the div-->
 
-<div class="page" id="five"> <!--Changed id to "five"-->
-	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1> <!--Adding text on the results page-->
-	</div>
+<div class="page" id="five"> <!--Added a div that included class and id that would direct the user to page 3-->
+	<div class="w3-container w3-flat-carrot"> <!-- Added a div class for the w3 container w3-flat-carrot-->
+		<h1>VResults</h1>  <!--Added a h, then wrote the header for question 3 here. Futhermore, I added text on the results page-->
+	</div> <!--Closed the div-->
 	
-	<div id="content" class="w3-container">
-		<p> Results </p> <!--Added text here that shows that the button displays results--> <!-- Added ending div-->
-		<a class="w3-btn w3-black" onclick="displayResults();"> View Results </a> <!--Created a button that will display results--> <!-- Adjusted beginning and ending divs--> <!--Added view results-->
-		<p id="results" ></p> <!-- Possibly displays results in text--> <!-- Adjusted beginning and ending divs-->
-
-	</div>
-	
-</div>
+	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container-->
+		<p> View Your Results Here </p> <!--Added a p, then added text here that shows that the button displays results. Futhermore, I Added ending div-->
+		<a class="w3-btn w3-black" onclick="displayResults();"> View Results </a> <!--Added a, then made a button that will display results. Futhermore, I adjusted beginning and ending divs-->
+		<p id="results" ></p> <!-- Possibly displays results in text. Futhermore, I adjusted beginning and ending divs-->
+	</div>  <!--Closed the div-->
+</div>  <!--Closed the div-->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
