@@ -17,21 +17,21 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-The goal of this questionare is to determine the probability of whether your symptoms indicate an allergy or a cold. 
+The goal of this questionare is to determine the probability of whether the user's symptoms indicate an allergy or a cold. 
  
 Known Issues:
-This app does not in anyway provide a accurate diagnosis.
+This app does not in anyway provide a accurate diagnosis. There are no known issues with the code. 
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-<!-- Added my self as an author, added a goal, and added known issues-->
+<!-- Added my self as an author, added a goal, and added known issues. Added more detail to known issues-->
 
    <head> 
       <title>Hello World</title>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Important information of page that is not displayed-->
       <meta name="apple-mobile-web-app-capable" content="yes">
-      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3.css"> <!--Links out to other files-->
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
@@ -55,13 +55,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function displayResults(){ <!-- I created a function that will display my results under scripts.
 		var allergy_percentage = (allergy_count/6) * 100; <!-- Created a variable for allergy percentage that divides the variable of allergy count by 6 (6 questions) and multiplied by 100 (to get percentage)-->
 		var cold_percentage = (cold_count/6) * 100; <!-- Created a variable for cold percentage that divides the  variable of cold count by 6 (6 questions) and multiplied by 100 (to get percentage)-->
-		var resultText = document.getElementById("results") <!-- Created a variable for stat stores my results-->
-		resultText.innerHTML = "Probability it is allergies =" + allergy_percentage + "<br> Probability it is a cold =" + cold_percentage
+		var resultText = document.getElementById("results") <!-- Created a variable that stores my results. Captures content of  <p id="results"></p> -->
+		resultText.innerHTML = "Probability it is allergies =" + allergy_percentage + "<br> Probability it is a cold =" + cold_percentage <!--What is changed between  changed what is between the <p id="results"></p>-->
 		
 	}; <!--This will display the results on the results page after pressing the button. Furthermore I closed the function and got rid of unnecessary code that was previously here-->
   </script>
 
-
+<!--Purpose of this page is to store the count of variables, calculate the percentages, and store the results that will be displayed on the last page-->
 
 <style>	
 .body {
@@ -85,7 +85,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
-<body>
+<!--Displays pages within html body-->	
+	
+<body> <!--Content that will be displayed-->
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
 </div>
@@ -100,96 +102,108 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div> <!--Added ending div here after noticing it was missing-->
 
-<div class="page" id="one">
+<div class="page" id="one"> <!--Assigns style class to a div-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
+    	<div id="content" class="w3-container"> <!--JavaScript event-->
         <p>Are your eyes watery or itchy?</p> <!--I wrote out the first question here-->
 	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--I created a black yes button that would add to the allergy count and direct the user to the second page-->
 	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--I created a black no button that would add to the cold count and direct the user to the second page-->
     	</div>
 </div>
 
-<div class="page" id="two">
+<!--Displays question 1 with yes or no that will add to coresponding allergy or cold variable-->	
+	
+<div class="page" id="two"> <!--Assigns style class to a div-->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
+	<div id="content" class="w3-container"> <!--JavaScript event-->
 		<p>Do you have a fever?</p> <!--Added a p, then wrote the second question here-->
 		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--I created a black yes button that would add to the cold count and direct the user to the third page-->
 		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--I created a black no button that would add to the allergy count and direct the user to the third page-->
 	</div>
 </div>	
+
+<!--Displays question 2 with yes or no that will add to coresponding allergy or cold variable-->		
 	
-<div class="page" id="three"> <!--Added a div that included class and id that would direct the user to page 3-->
+<div class="page" id="three"> <!--Added a div that included class and id that would direct the user to page 3. Assigns style class to a div-->
 	<div class="w3-container w3-flat-carrot"> <!-- Added a div class for the w3 container w3-flat-carrot-->
 		<h1>Question 3</h1> <!--Added a h, then wrote the header for question 3 here-->
 	</div> <!--Closed the div-->
 	
-	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container-->
+	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container. JavaScript event-->
 		<p>Do you have a sore throat?<p> <!--Added a p, then wrote question 3-->
 		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--I created a black yes button that would add to the cold count and direct the user to the fourth page-->
 		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--I created a black no button that would add to the allergy count and direct the user to the fourth page-->
 	</div> <!--Closed the div-->
 </div> <!--Closed the div-->
+	
+<!--Displays question 3 with yes or no that will add to coresponding allergy or cold variable-->	
 
-<div class="page" id="four"> <!--Added a div that included class and id that would direct the user to page 4-->
+<div class="page" id="four"> <!--Added a div that included class and id that would direct the user to page 4. Assigns style class to a div-->
 	<div class="w3-container w3-flat-carrot"> <!-- Added a div class for the w3 container w3-flat-carrot-->
 		<h1>Question 4</h1> <!--Added a h, then wrote the header for question 3 here-->
 	</div> <!--Closed the div-->
 	
-	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container-->
+	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container. JavaScript event-->-->
 		<p>Are your symptoms seasonal or chronic?<p> <!--Added a p, then wrote question 3-->
 		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--I created a black yes button that would add to the allergy count and direct the user to the fifth page. Furrthermore, I changed href for yes and no to "five"-->
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--I created a black no button that would add to the cold count and direct the user to the fifth page-->
 	</div> <!--Closed the div-->
 </div> <!--Closed the div-->
+
+<!--Displays question 4 with yes or no that will add to coresponding allergy or cold variable-->	
 	
-<!--This is for new allergy question-->
-	
-<div class="page" id="five"> <!--Added a div that included class and id that would direct the user to page 5-->
+<div class="page" id="five"> <!--Added a div that included class and id that would direct the user to page 5. Assigns style class to a div-->
 	<div class="w3-container w3-flat-carrot"> <!-- Added a div class for the w3 container w3-flat-carrot-->
 		<h1>Question 5</h1> <!--Added a h, then wrote the header for question 5 here-->
 	</div> <!--Closed the div-->
 	
-	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container-->
+	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container. JavaScript event-->
 		<p>Do you have itchy ears?<p> <!--Added a p, then wrote question 5-->
 		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--I created a black yes button that would add to the allergy count and direct the user to the fifth page. Furrthermore, I changed href for yes and no to "five"-->
 		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--I created a black no button that would add to the cold count and direct the user to the fifth page-->
 	</div> <!--Closed the div-->
 </div> <!--Closed the div-->
+
+<!--Displays question 5 with yes or no that will add to coresponding allergy or cold variable-->	
+<!--This is for new allergy question-->
 	
-<!--This is for new cold question-->
-	
-<div class="page" id="six"> <!--Added a div that included class and id that would direct the user to page 6-->
+<div class="page" id="six"> <!--Added a div that included class and id that would direct the user to page 6. Assigns style class to a div-->
 	<div class="w3-container w3-flat-carrot"> <!-- Added a div class for the w3 container w3-flat-carrot-->
 		<h1>Question 6</h1> <!--Added a h, then wrote the header for question 6 here-->
 	</div> <!--Closed the div-->
 	
-	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container-->
+	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container. JavaScript event-->-->
 		<p>Do you have body aches?<p> <!--Added a p, then wrote question 6-->
 		<a href="#seven" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--I created a black yes button that would add to the cold count and direct the user to the fifth page. Furrthermore, I changed href for yes and no to "five"-->
 		<a href="#seven" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--I created a black no button that would add to the allergy count and direct the user to the fifth page-->
 	</div> <!--Closed the div-->
 </div> <!--Closed the div-->
 
-<div class="page" id="seven"> <!--Added a div that included class and id that would direct the user to page 7-->
+<!--Displays question 5 with yes or no that will add to coresponding allergy or cold variable-->
+<!--This is for new cold question-->
+	
+<div class="page" id="seven"> <!--Added a div that included class and id that would direct the user to page 7. Assigns style class to a div-->
 	<div class="w3-container w3-flat-carrot"> <!-- Added a div class for the w3 container w3-flat-carrot-->
 		<h1>Results</h1>  <!--Added a h, then wrote the header for question 3 here. Futhermore, I added text on the results page-->
 	</div> <!--Closed the div-->
 	
-	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container-->
+	<div id="content" class="w3-container"> <!--Added a div, then had the id = content and class = w3-container. JavaScript event-->-->
 		<p> View Your Results By Pressing This Button: </p> <!--Added a p, then added text here that shows that the button displays results. Futhermore, I Added ending div-->
 		<a class="w3-btn w3-black" onclick="displayResults();"> View Results </a> <!--Added a, then made a button that will display results. Futhermore, I adjusted beginning and ending divs-->
-		<p id="results" ></p> <!-- Possibly displays results in text. Futhermore, I adjusted beginning and ending divs-->
+		<p id="results" ></p> <!-- Possibly displays results in text. Futhermore, I adjusted beginning and ending divs. -->
 	</div>  <!--Closed the div-->
 </div>  <!--Closed the div-->
+	
+<!--Displays a button, which when pressed will display percentages-->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<p>DIY Cold/Allergy Diagnostic App 3</p> <!--Changed the text in the footer-->
 </footer>
 
 </body>
